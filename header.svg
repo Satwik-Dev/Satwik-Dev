@@ -1,0 +1,196 @@
+<svg fill="none" viewBox="0 0 800 440" width="800" height="440" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        .terminal {
+          width: 100%;
+          height: 440px;
+          background: #0d1117;
+          border-radius: 12px;
+          overflow: hidden;
+          font-family: 'Courier New', monospace;
+          border: 1px solid #30363d;
+          position: relative;
+        }
+
+        .terminal::after {
+          content: '';
+          position: absolute;
+          top: 0; left: 0; right: 0; bottom: 0;
+          background: repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 2px,
+            rgba(255,255,255,0.008) 2px,
+            rgba(255,255,255,0.008) 4px
+          );
+          pointer-events: none;
+          z-index: 2;
+        }
+
+        .terminal-bar {
+          height: 36px;
+          background: #161b22;
+          display: flex;
+          align-items: center;
+          padding: 0 14px;
+          gap: 8px;
+          border-bottom: 1px solid #30363d;
+        }
+
+        .dot { width: 12px; height: 12px; border-radius: 50%; }
+        .dot-red { background: #ff5f56; }
+        .dot-yellow { background: #ffbd2e; }
+        .dot-green { background: #27c93f; }
+
+        .terminal-title {
+          color: #8b949e;
+          font-size: 12px;
+          margin-left: 12px;
+          letter-spacing: 0.5px;
+        }
+
+        .terminal-body {
+          padding: 20px 24px;
+          color: #c9d1d9;
+          font-size: 13.5px;
+          line-height: 2;
+          position: relative;
+          z-index: 1;
+        }
+
+        .name {
+          font-size: 20px;
+          font-weight: bold;
+          background: linear-gradient(90deg, #58a6ff, #3fb950, #d2a8ff, #ffa657, #58a6ff);
+          background-size: 300% 100%;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          animation: nameShift 4s ease infinite;
+          display: inline;
+        }
+
+        @keyframes nameShift {
+          0%, 100% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+        }
+
+        .status-dot {
+          display: inline-block;
+          width: 8px;
+          height: 8px;
+          background: #3fb950;
+          border-radius: 50%;
+          margin-right: 6px;
+          animation: pulse 2s ease-in-out infinite;
+          box-shadow: 0 0 6px rgba(63, 185, 80, 0.5);
+          vertical-align: middle;
+        }
+
+        @keyframes pulse {
+          0%, 100% { opacity: 1; transform: scale(1); }
+          50% { opacity: 0.5; transform: scale(0.85); }
+        }
+
+        .prompt { color: #7ee787; }
+        .command { color: #79c0ff; }
+        .key { color: #d2a8ff; }
+        .string { color: #a5d6ff; }
+        .comment { color: #8b949e; font-style: italic; }
+        .output { color: #c9d1d9; }
+        .highlight { color: #ffa657; }
+        .success { color: #3fb950; }
+        .role { color: #ff7b72; }
+        .dim { color: #484f58; }
+        .bracket { color: #c9d1d9; }
+
+        .cursor {
+          display: inline-block;
+          width: 9px;
+          height: 16px;
+          background: #58a6ff;
+          animation: blink 1s step-end infinite;
+          vertical-align: text-bottom;
+          margin-left: 2px;
+          border-radius: 1px;
+          box-shadow: 0 0 10px rgba(88, 166, 255, 0.7);
+        }
+
+        @keyframes blink {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0; }
+        }
+
+        .line {
+          opacity: 0;
+          animation: typeIn 0.4s ease forwards;
+        }
+
+        .line:nth-child(1)  { animation-delay: 0.1s; }
+        .line:nth-child(2)  { animation-delay: 0.5s; }
+        .line:nth-child(3)  { animation-delay: 0.9s; }
+        .line:nth-child(4)  { animation-delay: 1.3s; }
+        .line:nth-child(5)  { animation-delay: 1.7s; }
+        .line:nth-child(6)  { animation-delay: 2.1s; }
+        .line:nth-child(7)  { animation-delay: 2.5s; }
+        .line:nth-child(8)  { animation-delay: 2.9s; }
+        .line:nth-child(9)  { animation-delay: 3.3s; }
+        .line:nth-child(10) { animation-delay: 3.7s; }
+        .line:nth-child(11) { animation-delay: 4.1s; }
+        .line:nth-child(12) { animation-delay: 4.5s; }
+
+        @keyframes typeIn {
+          from { opacity: 0; transform: translateX(-8px); }
+          to { opacity: 1; transform: translateX(0); }
+        }
+
+        .glow-line {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 3px;
+          background: linear-gradient(90deg, #58a6ff, #3fb950, #d2a8ff, #ffa657, #ff7b72, #58a6ff);
+          background-size: 200% 100%;
+          animation: glowSlide 2.5s linear infinite;
+          z-index: 3;
+        }
+
+        @keyframes glowSlide {
+          0% { background-position: 0% 0%; }
+          100% { background-position: 200% 0%; }
+        }
+
+      </style>
+
+      <div class="terminal">
+        <div class="terminal-bar">
+          <div class="dot dot-red"></div>
+          <div class="dot dot-yellow"></div>
+          <div class="dot dot-green"></div>
+          <span class="terminal-title">satwik@dev ~ /cosmo-agi</span>
+        </div>
+        <div class="terminal-body">
+
+          <div class="line"><span class="prompt">$</span> <span class="command">cat</span> <span class="string">satwik.json</span></div>
+          <div class="line"><span class="bracket">{</span></div>
+          <div class="line"><span class="bracket">&#160;&#160;</span><span class="key">"name"</span><span class="bracket">:&#160;&#160;&#160;&#160;&#160;</span> <span class="name">"Satwik Alla"</span><span class="bracket">,</span></div>
+          <div class="line"><span class="bracket">&#160;&#160;</span><span class="key">"role"</span><span class="bracket">:&#160;&#160;&#160;&#160;&#160;</span> <span class="role">"Lead Software Engineer @ Cosmo AGI, LLC"</span><span class="bracket">,</span></div>
+          <div class="line"><span class="bracket">&#160;&#160;</span><span class="key">"backend"</span><span class="bracket">:&#160;&#160;</span> <span class="string">"FastAPI &#183; SQLAlchemy &#183; WebSockets &#183; Redis &#183; PostgreSQL"</span><span class="bracket">,</span></div>
+          <div class="line"><span class="bracket">&#160;&#160;</span><span class="key">"frontend"</span><span class="bracket">: </span> <span class="string">"Next.js 14 &#183; React 19 &#183; TypeScript &#183; Three.js"</span><span class="bracket">,</span></div>
+          <div class="line"><span class="bracket">&#160;&#160;</span><span class="key">"infra"</span><span class="bracket">:&#160;&#160;&#160;&#160;</span> <span class="string">"Docker &#183; AWS &#183; GCP &#183; Kafka &#183; GitHub Actions"</span><span class="bracket">,</span></div>
+          <div class="line"><span class="bracket">&#160;&#160;</span><span class="key">"ai"</span><span class="bracket">:&#160;&#160;&#160;&#160;&#160;&#160;&#160;</span> <span class="string">"GPT-4o &#183; Gemini &#183; LLM Pipelines &#183; Semantic Caching"</span><span class="bracket">,</span></div>
+          <div class="line"><span class="bracket">&#160;&#160;</span><span class="key">"scale"</span><span class="bracket">:&#160;&#160;&#160;&#160;</span> <span class="highlight">"100K+ users &#183; sub-200ms APIs &#183; 99.9% uptime"</span></div>
+          <div class="line"><span class="bracket">}</span></div>
+          <div class="line"><span class="prompt">$</span> <span class="status-dot"></span><span class="success">open to opportunities</span> <span class="dim">|</span> <span class="highlight">let's build something ambitious</span><span class="cursor"></span></div>
+
+        </div>
+        <div class="glow-line"></div>
+      </div>
+
+    </div>
+  </foreignObject>
+</svg>
