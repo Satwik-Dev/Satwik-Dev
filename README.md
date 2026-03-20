@@ -56,13 +56,13 @@ class SatwikAlla:
 
 ```
 ┌──────────────────────────────────────────────────────────────────────┐
-│  100K+  concurrent users handled across distributed microservices   │
-│  sub-200ms  API response times in production (FastAPI + Redis)      │
-│  99.9%  uptime across production services                          │
-│  40%  LLM API cost reduction via semantic caching + failover       │
-│  10K+  events/sec processed through Kafka with zero data loss      │
-│  87%  deployment time reduction via Docker + GitHub Actions CI/CD  │
-│  95%+  test coverage maintained across production codebase         │
+│  100K+  concurrent users handled across distributed microservices    │
+│  sub-200ms  API response times in production (FastAPI + Redis)       │
+│  99.9%  uptime across production services                            │
+│  40%  LLM API cost reduction via semantic caching + failover         │
+│  10K+  events/sec processed through Kafka with zero data loss        │
+│  87%  deployment time reduction via Docker + GitHub Actions CI/CD    │
+│  95%+  test coverage maintained across production codebase           │
 └──────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -71,11 +71,11 @@ class SatwikAlla:
 ### `> git log --oneline career`
 
 ```
-e4f1a2c  2025-present  Cosmo AGI ── Lead Software Engineer, built entire production stack from zero
-b3d7e8f  2025         UMBC ─────── Graduate Research + Teaching Assistant
-a1c9d4e  2022-2023    BYJU'S ──── SDE, distributed APIs serving 100K+ concurrent users
-f7b2e3a  2022         ODC ──────── Full-stack event platform, led team of 5
-c8a5f1d  2021         Ceremorphic  RISC-V microprocessor design, FPU timing optimization
+2025-present  Cosmo AGI, LLC ───────────────────────────── Lead Software Engineer, built entire production stack from zero
+2025          University of Maryland Baltimore County ──── Graduate Research + Teaching Assistant
+2022-2023     BYJU'S (Think and Learn Private Ltd) ─────── SDE, distributed APIs serving 100K+ concurrent users
+2022          Odisha Design Council ────────────────────── Full-stack event platform, led team of 5
+2021          Ceremorphic Inc. ─────────────────────────── RISC-V microprocessor design, FPU timing optimization
 ```
 
 ---
