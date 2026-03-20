@@ -25,16 +25,16 @@ class SatwikAlla:
 
     def tech_stack(self):
         return {
-            "languages":  ["Python", "TypeScript", "JavaScript", "C#"],
+            "languages":  ["Python", "TypeScript", "JavaScript", "C++", "C", "Ruby", "Java"],
             "backend":    ["FastAPI", "SQLAlchemy", "Alembic", "WebSockets", "JWT", "bcrypt"],
             "frontend":   ["Next.js 14", "React 19", "Three.js", "Tailwind CSS"],
-            "databases":  ["PostgreSQL", "Redis", "Qdrant (Vector DB)", "MongoDB"],
+            "databases":  ["PostgreSQL", "Redis", "Supabase", "MongoDB"],
             "streaming":  ["Apache Kafka", "Debezium", "CDC Pipelines"],
             "ai_ml":      ["OpenAI GPT-4o", "Google Gemini", "Semantic Caching", "Prompt Engineering"],
-            "cloud":      ["AWS (S3, EC2, SES, IAM)", "GCP", "Cloudflare R2"],
-            "devops":     ["Docker", "Docker Compose", "GitHub Actions", "Vercel", "CI/CD"],
-            "monitoring": ["Prometheus", "Grafana", "Sentry", "PagerDuty"],
-            "testing":    ["Pytest", "TDD", "Postman", "95%+ Coverage"]
+            "cloud":      ["AWS", "GCP"],
+            "devops":     ["Docker", "GitHub Actions", "Vercel", "CI/CD"],
+            "monitoring": ["Prometheus", "Grafana", "Sentry", "DataDog"],
+            "testing":    ["Pytest", "TDD", "Postman", "Automated Testing"]
         }
 ```
 
