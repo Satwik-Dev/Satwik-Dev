@@ -19,7 +19,7 @@
 ```python
 class SatwikAlla:
     def __init__(self):
-        self.role         = "Lead Software Engineer @ Cosmo AGI, LLC"
+        self.role         = "Software Engineer @ Cosmo AGI, LLC"
         self.education    = ["MS Software Eng, UMBC (3.91 GPA)", "B.Tech, IIT Bhubaneswar"]
         self.currently    = "Building AI-powered SaaS from zero to production"
 
