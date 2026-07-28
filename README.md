@@ -19,7 +19,7 @@
 ```python
 class SatwikAlla:
     def __init__(self):
-        self.role         = "Software Engineer @ Cosmo AGI, LLC"
+        self.role         = "Software Engineer @ Cosmo AGI"
         self.education    = ["MS Software Eng, UMBC (3.91 GPA)", "B.Tech, IIT Bhubaneswar"]
         self.currently    = "Building AI-powered SaaS from zero to production"
 
@@ -42,7 +42,7 @@ class SatwikAlla:
 
 ### `> ls projects/`
 
-**`spirit-ai/`** -- AI-powered SaaS platform built from scratch as lead software engineer at Cosmo AGI, LLC. Python FastAPI + async SQLAlchemy + PostgreSQL + Redis backend. Dual-LLM integration (GPT-4o + Gemini) with automatic failover. Next.js 14 + React 19 + Three.js frontend with real-time WebSocket streaming. Docker Compose orchestration, Alembic migrations, JWT auth, Sentry + Prometheus monitoring. Sub-200ms APIs, 99.9% uptime, 87% faster deployments.
+**`spirit-ai/`** -- AI-powered SaaS platform built from scratch as lead software engineer at Cosmo AGI. Python FastAPI + async SQLAlchemy + PostgreSQL + Redis backend. Dual-LLM integration (GPT-4o + Gemini) with automatic failover. Next.js 14 + React 19 + Three.js frontend with real-time WebSocket streaming. Docker Compose orchestration, Alembic migrations, JWT auth, Sentry + Prometheus monitoring. Sub-200ms APIs, 99.9% uptime, 87% faster deployments.
 
 **`cdc-streaming-pipeline/`** -- Distributed real-time data infrastructure. Apache Kafka + Debezium capturing PostgreSQL change events. 10K+ events/sec, exactly-once semantics, fault-tolerant leader election, parallel consumer pipelines with zero data loss.
 
@@ -71,7 +71,7 @@ class SatwikAlla:
 ### `> git log --oneline career`
 
 ```
-2025-present  Cosmo AGI, LLC ───────────────────────────── Lead Software Engineer, built entire production stack from zero
+2025-present  Cosmo AGI ───────────────────────────── Lead Software Engineer, built entire production stack from zero
 2025          University of Maryland Baltimore County ──── Graduate Research + Teaching Assistant
 2022-2023     BYJU'S (Think and Learn Private Ltd) ─────── SDE, distributed APIs serving 100K+ concurrent users
 2022          Odisha Design Council ────────────────────── Full-stack event platform, led team of 5
