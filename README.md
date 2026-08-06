@@ -3,11 +3,11 @@
 </p>
 
 <p align="center">
-  <a href="https://linkedin.com/in/satwik-alla">
+  <a href="https://www.linkedin.com/in/satwik-alla">
     <img src="https://img.shields.io/badge/-satwik--alla-0A66C2?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn"/>
   </a>
-  <a href="mailto:allasatwik93@gmail.com">
-    <img src="https://img.shields.io/badge/-allasatwik93-EA4335?style=flat&logo=gmail&logoColor=white" alt="Email"/>
+  <a href="mailto:allasatwik4@gmail.com">
+    <img src="https://img.shields.io/badge/-allasatwik4-EA4335?style=flat&logo=gmail&logoColor=white" alt="Email"/>
   </a>
   <a href="https://portfolio-satwikalla.vercel.app/">
     <img src="https://img.shields.io/badge/-Portfolio-000000?style=flat&logo=github&logoColor=white" alt="Portfolio"/>
@@ -19,22 +19,23 @@
 ```python
 class SatwikAlla:
     def __init__(self):
-        self.role         = "Software Engineer @ Cosmo AGI"
+        self.role         = "AI Engineer @ Cosmo AGI"
         self.education    = ["MS Software Eng, UMBC (3.91 GPA)", "B.Tech, IIT Bhubaneswar"]
-        self.currently    = "Building AI-powered SaaS from zero to production"
+        self.currently    = "Shipping production LLM systems: retrieval, memory, caching, routing, safety"
 
     def tech_stack(self):
         return {
-            "languages":  ["Python", "TypeScript", "JavaScript", "C++", "C", "Ruby", "Java"],
-            "backend":    ["FastAPI", "SQLAlchemy", "Alembic", "WebSockets", "JWT", "bcrypt"],
+            "languages":  ["Python", "TypeScript", "JavaScript", "C++", "C", "Java"],
+            "backend":    ["FastAPI", "Django REST", "SQLAlchemy", "Alembic", "WebSockets", "JWT"],
             "frontend":   ["Next.js 14", "React 19", "Three.js", "Tailwind CSS"],
-            "databases":  ["PostgreSQL", "Redis", "Supabase", "MongoDB"],
-            "streaming":  ["Apache Kafka", "Debezium", "CDC Pipelines"],
-            "ai_ml":      ["OpenAI GPT-4o", "Google Gemini", "Semantic Caching", "Prompt Engineering"],
-            "cloud":      ["AWS", "GCP"],
-            "devops":     ["Docker", "GitHub Actions", "Vercel", "CI/CD"],
-            "monitoring": ["Prometheus", "Grafana", "Sentry", "DataDog"],
-            "testing":    ["Pytest", "TDD", "Postman", "Automated Testing"]
+            "databases":  ["PostgreSQL", "Redis", "MongoDB", "Supabase"],
+            "ai_ml":      ["OpenAI GPT-4o", "Gemini", "RAG", "LangChain", "Embeddings", "Semantic Caching"],
+            "vector":     ["Qdrant", "pgvector", "Vector Search", "Top-k Retrieval"],
+            "voice":      ["Whisper", "ElevenLabs TTS", "Gemini Multimodal"],
+            "streaming":  ["Apache Kafka", "Debezium", "PySpark", "HDFS", "CDC Pipelines"],
+            "cloud":      ["GCP", "AWS", "Cloud Run", "Cloud SQL", "EKS"],
+            "devops":     ["Docker", "Kubernetes", "GitHub Actions", "CI/CD"],
+            "monitoring": ["Prometheus", "Grafana", "Sentry", "Coralogix"]
         }
 ```
 
@@ -42,13 +43,13 @@ class SatwikAlla:
 
 ### `> ls projects/`
 
-**`spirit-ai/`** -- AI-powered SaaS platform built from scratch as lead software engineer at Cosmo AGI. Python FastAPI + async SQLAlchemy + PostgreSQL + Redis backend. Dual-LLM integration (GPT-4o + Gemini) with automatic failover. Next.js 14 + React 19 + Three.js frontend with real-time WebSocket streaming. Docker Compose orchestration, Alembic migrations, JWT auth, Sentry + Prometheus monitoring. Sub-200ms APIs, 99.9% uptime, 87% faster deployments.
+**`cosmo-companion-ai/`** -- Founding AI engineer on a companion AI product. Long-term episodic memory with RAG over Qdrant + pgvector (automated fact extraction, top-k semantic retrieval). Redis semantic cache matching queries by embedding cosine similarity to skip redundant LLM calls. Context-pruning and token-budgeting engine. OpenAI + Gemini behind one streaming interface for per-persona routing, plus multimodal voice (Whisper, TTS) and a real-time safety pipeline (moderation, prompt-injection mitigation, self-harm crisis detection). FastAPI backend built from an empty repo: 64 endpoints, 19 Postgres tables, 26 Alembic migrations, async throughout on GCP. p95 latency -40%, token costs -30%.
 
-**`cdc-streaming-pipeline/`** -- Distributed real-time data infrastructure. Apache Kafka + Debezium capturing PostgreSQL change events. 10K+ events/sec, exactly-once semantics, fault-tolerant leader election, parallel consumer pipelines with zero data loss.
+**`cdc-streaming-pipeline/`** -- End-to-end event-driven pipeline streaming PostgreSQL transactions into a Hadoop data lake. Debezium captures row-level WAL mutations, a multi-broker Kafka cluster buffers events, and a PySpark Streaming engine parses nested JSON and runs stateful transformations. Sinks to HDFS as Parquet + Delta Lake for fault-tolerant, ordered processing with zero data loss.
 
-**`sbom-manager/`** -- Software supply chain security platform. Python-based dependency graph analysis across 100+ packages, vulnerability database integration, automated threat detection. 95% precision, 70% reduction in manual audit time.
+**`sbom-manager/`** -- Full-stack SBOM ingestion, dependency analysis, and vulnerability tracking platform for supply chain security. FastAPI + PostgreSQL backend ingesting SPDX and CycloneDX files, Celery + Redis workers cross-referencing packages against NVD/OSV databases, and a React + TypeScript dashboard visualizing dependency graphs and CVE risk. JWT RBAC, Docker, and Cloud Build CI/CD for license compliance.
 
-**`quiz-planner/`** -- AI-powered learning management system. Python FastAPI backend integrating OpenAI GPT-4 API for quiz generation. Prompt engineering for quality control, Redis-backed rate limiting. 35% API cost reduction.
+**`quiz-planner/`** -- RAG-powered learning platform converting study materials into tailored quizzes and real-time tutoring. FastAPI backend with LangChain/LlamaIndex chunking, vector search (Pinecone/FAISS), and open-source LLMs (Llama 3 / Mistral) generating structured JSON quiz schemas. React + TypeScript UI with a multi-turn context-aware chat.
 
 ---
 
@@ -56,13 +57,13 @@ class SatwikAlla:
 
 ```
 ┌──────────────────────────────────────────────────────────────────────┐
-│  100K+  concurrent users handled across distributed microservices    │
+│  30K-100K+  daily requests served across distributed microservices   │
 │  sub-200ms  API response times in production (FastAPI + Redis)       │
-│  99.9%  uptime across production services                            │
-│  40%  LLM API cost reduction via semantic caching + failover         │
-│  10K+  events/sec processed through Kafka with zero data loss        │
-│  87%  deployment time reduction via Docker + GitHub Actions CI/CD    │
-│  95%+  test coverage maintained across production codebase           │
+│  40%  p95 LLM inference latency cut via Redis semantic caching       │
+│  30%  token cost reduction via context-pruning + token budgeting     │
+│  64  FastAPI endpoints built from an empty repo, async throughout    │
+│  35%  API latency drop from collapsing 3-tier architecture at BYJU'S │
+│  99.95%  uptime SLA held on-call across production services          │
 └──────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -71,9 +72,9 @@ class SatwikAlla:
 ### `> git log --oneline career`
 
 ```
-2025-present  Cosmo AGI ───────────────────────────── Lead Software Engineer, built entire production stack from zero
-2025          University of Maryland Baltimore County ──── Graduate Research + Teaching Assistant
-2022-2023     BYJU'S (Think and Learn Private Ltd) ─────── SDE, distributed APIs serving 100K+ concurrent users
+2025-present  Cosmo AGI ───────────────────────────── Founding AI Engineer, owns AI systems end to end
+2025          University of Maryland Baltimore County ──── Teaching Assistant, SENG 701 capstone
+2022-2023     BYJU'S (Think and Learn Private Ltd) ─────── SDE, backend serving 3 K-12 platforms, on-call
 2022          Odisha Design Council ────────────────────── Full-stack event platform, led team of 5
 2021          Ceremorphic Inc. ─────────────────────────── RISC-V microprocessor design, FPU timing optimization
 ```
@@ -81,7 +82,7 @@ class SatwikAlla:
 ---
 
 <p align="center">
-  <b>Currently open to full-time roles in full-stack, backend, or AI/ML engineering.</b>
+  <b>Currently open to full-time roles in AI/ML, forward-deployed, backend, or full-stack engineering.</b>
   <br/>
   If you're building something ambitious, let's talk.
 </p>
